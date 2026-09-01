@@ -1,0 +1,2 @@
+# AI Bridge Plugin Dependencies
+# Utiliza librerías nativas de Python, este archivo se mantiene para compatibilidad con pip
