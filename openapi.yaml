@@ -1,0 +1,24 @@
+openapi: 3.0.1
+info:
+  title: AI Bridge Protocol API
+  description: API local para la transferencia y recuperación de contexto entre sesiones de IA.
+  version: "1.0.0"
+servers:
+  - url: http://localhost:8080
+paths:
+  /export-context:
+    post:
+      summary: Genera el checkpoint de estado del proyecto actual
+      operationId: exportContext
+      responses:
+        '200':
+          description: Contexto exportado correctamente en AppBridge_State_Checkpoint.json
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  checkpoint_path:
+                    type: string

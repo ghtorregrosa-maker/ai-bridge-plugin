@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "AI Bridge Protocol",
+  "name_for_model": "ai_bridge_protocol",
+  "description_for_human": "Plugin para transferir contexto completo de código, arquitectura y estado entre sesiones de IA sin pérdida de tokens.",
+  "description_for_model": "Herramienta crítica para exportar, empaquetar y transferir la arquitectura multiplataforma actual (Flutter, Node.js, Python) a una nueva sesión de IA mediante un checkpoint estructurado.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://raw.githubusercontent.com/ghtorregrosa-maker/ai-bridge-plugin/main/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://github.com/ghtorregrosa-maker/ai-bridge-plugin/raw/main/logo.png",
+  "contact_email": "soporte@ai-bridge.local",
+  "legal_info_url": "https://github.com/ghtorregrosa-maker/ai-bridge-plugin"
+}

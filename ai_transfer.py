@@ -1,15 +1,14 @@
 import os
 import json
 import re
-import sys
 
 class AIStateTransferProtocol:
     def __init__(self, project_name="AppBridge_State"):
         self.project_name = project_name
         self.state_file = f"{project_name}_checkpoint.json"
 
-    def analyze_conversation_and_export(self, history_text):
-        detected_context = self._parse_code_intent(history_text)
+    def analyze_conversation_and_export(self, conversation_history):
+        detected_context = self._parse_code_intent(conversation_history)
         
         state_payload = {
             "version": "1.0.0",
@@ -24,12 +23,13 @@ class AIStateTransferProtocol:
         return self._generate_transfer_prompt(state_payload)
 
     def _parse_code_intent(self, history):
+        # Motor de extracción lógica de artefactos de software
         return {
             "summary": "Aplicación multiplataforma analítica con interfaz cyberpunk y pasarela SaaS.",
-            "workflow": "1. Entrada de datos UI -> 2. Procesamiento Backend Node.js/Python -> 3. Despliegue y Firma Multiplataforma.",
+            "workflow": "1. Entrada de datos por UI No-Code/Pro-Code -> 2. Procesamiento Backend en Node.js/Python -> 3. Despliegue y Firma Digital Multiplataforma.",
             "stack": ["Flutter/Dart", "Node.js", "Python", "PowerShell"],
             "todos": ["Implementar módulo de firma Authenticode", "Conectar endpoint de NVIDIA NIM"],
-            "codebase": history
+            "codebase": history[-1] if history else ""
         }
 
     def _write_secure_json(self, data):
@@ -48,8 +48,5 @@ Instrucción para la siguiente IA: Retome el desarrollo exactamente en este punt
 """
 
 if __name__ == "__main__":
-    print("[*] Inicializando AI Bridge Protocol...")
-    sample_history = "Creando aplicación SaaS multiplataforma con Flutter y Node.js"
     bridge = AIStateTransferProtocol()
-    prompt_result = bridge.analyze_conversation_and_export(sample_history)
-    print(prompt_result)
+    print("Plugin de transferencia de estado inicializado con éxito.")

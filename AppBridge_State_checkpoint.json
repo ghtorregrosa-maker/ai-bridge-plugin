@@ -1,0 +1,16 @@
+{
+    "version": "1.0.0",
+    "target_app_summary": "Aplicación multiplataforma analítica con interfaz cyberpunk y pasarela SaaS.",
+    "workflow_architecture": "1. Entrada de datos UI -> 2. Procesamiento Backend Node.js/Python -> 3. Despliegue y Firma Multiplataforma.",
+    "tech_stack": [
+        "Flutter/Dart",
+        "Node.js",
+        "Python",
+        "PowerShell"
+    ],
+    "pending_tasks": [
+        "Implementar módulo de firma Authenticode",
+        "Conectar endpoint de NVIDIA NIM"
+    ],
+    "full_codebase_state": "Creando aplicación SaaS multiplataforma con Flutter y Node.js"
+}
